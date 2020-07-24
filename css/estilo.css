@@ -1,0 +1,18 @@
+body{
+    background-color: lightgrey;
+    color: black;
+}
+
+.container{
+    background-color: white;
+}
+
+.row{
+    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.right{
+     float: right;
+}

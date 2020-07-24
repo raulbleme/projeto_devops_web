@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventDash - Relatório de Eventos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script type="text/javascript" src="js/eventos.js"></script>
+    <script type="text/javascript" src="js/logout.js"></script>
+    <script type="text/javascript" src="js/imprimireventos.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <h3 class="text-center">EventDash - Relatório de Eventos</h3>
+            </div>
+            <div class="col-2">
+                <button onclick="logout()" type="button" class="btn btn-secondary btn-sm">Sair</button>
+            </div>
+        </div>
+        
+        <br>
+        <div class="col-8">
+            <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Data Inicial</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Digite a data inicial" aria-label="datainicial" aria-describedby="addon-wrapping" id="txtDataInicio">
+            </div>
+        </div>
+
+        <br>
+        <div class="col-8">
+        <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Data Fim</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Digite a data fim" aria-label="datafim" aria-describedby="addon-wrapping" id="txtDataFim">
+            </div>
+        </div>
+        <br>
+        <div class="col-6">
+            <button onclick="gerar()" type="button" class="btn btn-primary btn-lg">Gerar Relatório</button>
+        </div>
+        <br>
+        <div class="col-12">
+        <button type="button" onclick="imprimir()" class="btn btn-secondary btn-sm">Imprimir</button>
+        <button type="button" onclick="exportToExcel()" class="btn btn-secondary btn-sm">Gerar Excel</button>
+        <button onclick="logout()" type="button" class="btn btn-secondary btn-sm">Logout</button>
+        </div>
+        <br>
+        <div class="col-12">
+            <button type="button" onclick="window.location='selecao.html'" class="btn btn-secondary btn-sm">Voltar</button>
+        </div>
+        <br><br>
+
+        <h3>Eventos:</h3><br>
+        <h5 id="eventos"></h5>
+        <br>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
